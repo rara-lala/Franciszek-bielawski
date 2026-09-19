@@ -131,6 +131,25 @@
 @media(max-width:680px){.fb-salon .fb-theme-bar{padding:6px 20px;}}
 @media(forced-colors:active){.fb-salon .fb-switch-track::after{background:ButtonText;}}
 @media print{.fb-salon .fb-theme-bar{display:none;}}
+
+/* 음반 커버와 재생 영역 */
+.fb-salon .fb-music{grid-template-columns:148px minmax(0,1fr);gap:14px 27px;}
+.fb-salon .fb-album-cover{grid-column:1;grid-row:1 / 3;align-self:center;min-width:0;}
+.fb-salon .fb-album-cover img{display:block;width:100%;max-width:100%;height:auto;aspect-ratio:1 / 1;object-fit:contain;border:1px solid var(--line);border-radius:0;}
+.fb-salon .fb-track-info{grid-column:2;min-width:0;}
+.fb-salon .fb-music audio{grid-column:2;}
+.fb-salon .fb-fiction-note{margin:0;padding:22px 28px 25px;text-align:center;font-size:11px;font-weight:400;line-height:1.9;letter-spacing:0;color:var(--muted);}
+@media(max-width:680px){
+.fb-salon .fb-music{grid-template-columns:100px minmax(0,1fr);gap:18px;}
+.fb-salon .fb-album-cover{grid-row:1;}
+.fb-salon .fb-music-title{font-size:21px;}
+.fb-salon .fb-music audio{grid-column:1 / -1;}
+.fb-salon .fb-fiction-note{padding:20px 22px 23px;}
+}
+@media(max-width:360px){
+.fb-salon .fb-music{grid-template-columns:82px minmax(0,1fr);gap:15px;}
+.fb-salon .fb-music-title{font-size:19px;}
+}
 </style>
 <div class="fb-theme">
 <input class="fb-theme-input" type="checkbox" id="fb-dark-mode" role="switch" aria-label="다크 모드">
@@ -144,7 +163,9 @@
 <p class="fb-subtitle">파르벵의 조용한 피아니스트</p><div class="fb-rule" aria-hidden="true"></div>
 <blockquote class="fb-quote">아름다움 앞에서는 무릎 꿇지만,<br>사람 앞에서는 한 걸음 뒤에 서는 남자.</blockquote>
 <p class="fb-signature">프란치셰크 비엘라프스키<br>1815. 11. 19. &nbsp; · &nbsp; 피아니스트 겸 작곡가</p></div></header>
-<section class="fb-music" aria-label="인물의 음악"><div><p class="fb-eyebrow">POUR PIANO</p><p class="fb-music-title">Valse mélancolique</p><p class="fb-music-meta">Valse No. 4 in A Minor<br>Op. 31 No. 2 · Bielawski</p></div>
+<section class="fb-music" aria-label="인물의 음악">
+<figure class="fb-album-cover"><img src="https://pub-8db3c87c288c410fa340aeafb805be7c.r2.dev/post-images/b5f3451b-85cd-4b22-83d5-0a475928e526/f5220dd7-9420-4261-91d6-df30586ae161.jpg" alt="BIELAWSKI · WALTZES — Aleksander Wierzyński. 꽃이 꽂힌 화병의 유화로 꾸민 음반 커버." width="1254" height="1254" loading="lazy" decoding="async"></figure>
+<div class="fb-track-info"><p class="fb-eyebrow">POUR PIANO</p><p class="fb-music-title">Valse mélancolique</p><p class="fb-music-meta">Valse No. 4 in A Minor<br>Op. 31 No. 2 · Bielawski</p></div>
 <audio controls preload="none" aria-label="비엘라프스키, 가단조 왈츠 4번 재생"><source src="https://pub-8db3c87c288c410fa340aeafb805be7c.r2.dev/post-audios/b5f3451b-85cd-4b22-83d5-0a475928e526/4dcad378-c7a3-46e1-a591-89c575e33cb1.mp3" type="audio/mpeg">이 브라우저에서는 오디오를 지원하지 않습니다. <a href="https://pub-8db3c87c288c410fa340aeafb805be7c.r2.dev/post-audios/b5f3451b-85cd-4b22-83d5-0a475928e526/4dcad378-c7a3-46e1-a591-89c575e33cb1.mp3">음악 듣기</a></audio></section>
 <nav class="fb-nav" aria-label="글 안에서 이동"><a href="#fb-profile">인물 기록</a><a href="#fb-greeting">그리팅</a><a href="#fb-entrance">살롱으로</a></nav>
 <div class="fb-content"><section id="fb-profile" aria-labelledby="fb-profile-heading"><div class="fb-section-head"><h2 id="fb-profile-heading">인물 기록</h2><small>Portrait en onze fragments</small></div>
@@ -274,6 +295,7 @@
 <!-- SALON_LINK_HERE를 실제 살롱 입장 링크로 교체하세요. -->
 <a class="fb-enter" href="SALON_LINK_HERE" lang="fr">Entrer dans le salon <span aria-hidden="true">→</span></a>
 <p class="fb-footer-note">FRANCISZEK BIELAWSKI</p></footer>
+<p class="fb-fiction-note">본 소개글의 모든 설정은 허구이며, 등장인물은 가상의 인물입니다. 실제 역사와는 관련이 없습니다.</p>
 </article>
 </div>
 <!-- 붙여넣기 끝 -->
